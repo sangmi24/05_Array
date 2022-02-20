@@ -113,11 +113,73 @@ public class ArrayPractice {
         	   
         	   
         	   String[] day = {"월요일","화요일","수요일","목요일","금요일","토요일","일요일"} ;
+        	   //하다 맘
+              
+                }
+           
+           public void practice13() {
+        	//주민등록번호를 String 문자열로 입력 받고 입력 받은 그 문자열을 
+        	// 각 인덱스 별 문자를 char[] 에 옮겨 담기(단, 성별 자리 이후부터는 *로 담기)
+        	
+        	   //123456-1234567 => 123456-1******
+        	   Scanner sc = new Scanner(System.in);
+        	   System.out.print("주민등록번호(-포함) : ");
+        	   String Idnum = sc.nextLine();
         	   
-                        	   
+        	   char[] arr  = new char[14];  //배열 생성. 숫자 - 합쳐서 14개
+
+        	   for(int i=0; i<=13 ;i++) {  //정수는13개, 반복해서 숫자 나열
+        		  arr[i]=Idnum.charAt(i);   // 입력한넘버에서 뽑기.
+        		   
+        	   if(i<=7) {                      //*전에는 숫자
+              	   System.out.print(arr[i]);
+              	   }
+        	   else {
+        		   System.out.print("*");
+        	     }      		  
+        	   }       	  
+            }
+           public void practice7() {
         	   
+        	Scanner sc = new Scanner(System.in);
+        	System.out.print("정수 : ");
+        	int num = sc.nextInt();
+        	int[] arr = new int[num]; //배열 미리 밖에  빼놔야함
+    		int sum = 0;   //합 0으로 초기화
+
+        	for(int i=0; i<arr.length; i++) {  //배열의 길이만큼이요
+        		
+        		System.out.print("배열 "+i+"번째 인덱스에 넣을 값 : ");
+        		arr[i] = sc.nextInt();  
+      		
+        		sum += arr[i];    
+        		
+        	}
+        	for(int i=0; i< arr.length ; i++) {
+               System.out.print ( arr[i] + " ") ;    //배열을 이용하기! 	
+        	}
+        	System.out.println("\n총 합 : "+sum);
+
         	   
-           }}
+           }
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+          }
         	   
            
         	
